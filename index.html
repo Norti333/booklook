@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <script src="node_modules/handlebars/dist/handlebars.js"></script>
+    
 </head>
 
 <body>
@@ -18,9 +18,9 @@
                 <h1>Book Look
                     <i class="fa fa-eye" aria-hidden="true"></i>
                 </h1>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                     <h3>Search by :
-                    <select name="" id="input" class="form-control" required="required">
+                    <select name=""  class="form-control searchBy" required="required">
                        <option value="inauthor">Author</option>
                        <option value="intitle">Title</option>
                        <option value="isbn">ISBN</option>
@@ -51,9 +51,9 @@
     <script id="render-post" type="text/x-handlebars-template">
         {{#each books}}
         <div class=row>
-            <h2><a href={{link}}>{{title}}</a></h2>
+            <h1><a href={{link}}>{{title}}</a></h1>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <h3> {{author}}</h3>
+                <h3>Author: {{author}}</h3>
                 <img src={{imgsrc}}>
             </div>
 
@@ -72,7 +72,7 @@
     </script>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
-
+    <script src="node_modules/handlebars/dist/handlebars.js"></script>
     <script src="script.js"></script>
 </body>
 
